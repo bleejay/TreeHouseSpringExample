@@ -5,15 +5,17 @@ import java.time.LocalDate;
 public class Gif {
 
     private String name;
+    private int categoryID;
     private LocalDate dateUploaded;
     private String username;
-    private boolean favourite;
+    private boolean favorite;
 
-    public Gif(String name, LocalDate dateUploaded, String username, boolean favourite) {
+    public Gif(String name, int categoryID, LocalDate dateUploaded, String username, boolean favorite) {
         this.name = name;
+        this.categoryID = categoryID;
         this.dateUploaded = dateUploaded;
         this.username = username;
-        this.favourite = favourite;
+        this.favorite = favorite;
     }
 
     public String getName() {
@@ -40,11 +42,15 @@ public class Gif {
         this.username = username;
     }
 
-    public boolean isFavourite() {
-        return favourite;
+    public boolean isFavorite() {
+        return favorite;
     }
 
-    public void setFavourite(boolean favourite) {
-        this.favourite = favourite;
+    public void setFavorite(boolean favourite) {
+        this.favorite = favourite;
     }
+
+    public int getCategoryID() {return categoryID;}
+
+    public void setCategoryID(int categoryID) { this.categoryID = categoryID; }
 }
