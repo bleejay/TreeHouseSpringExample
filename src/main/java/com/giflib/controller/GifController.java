@@ -1,4 +1,4 @@
-package com.giflib.Controller;
+package com.giflib.controller;
 
 import com.giflib.data.GifRepository;
 import com.giflib.model.Gif;
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -35,6 +36,13 @@ public class GifController {
         List<Gif> gifs = gifRepository.findByFavorite();
         modelMap.put("gifs", gifs);
         return "favorites";
+    }
+
+    @RequestMapping(value = "/search", params = "q")
+    public String searchResults (@RequestParam("q") String keyword, ModelMap modelMap){
+        List<Gif> gifs = gifRepository.searchByKeyword(keyword);
+        modelMap.put("gifs", gifs);
+        return "search-results";
     }
 
 }

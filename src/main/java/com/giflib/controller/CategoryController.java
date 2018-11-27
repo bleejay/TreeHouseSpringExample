@@ -1,4 +1,4 @@
-package com.giflib.Controller;
+package com.giflib.controller;
 
 import com.giflib.data.CategoryRepository;
 import com.giflib.data.GifRepository;
