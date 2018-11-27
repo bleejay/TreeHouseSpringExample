@@ -1,9 +1,9 @@
 # TreeHouseSpringExample
 My version of the code walk-through on tree house under the track 'spring basics'
 
-##GifLib
+## GifLib
 
-###Features
+### Features
 The app itself is a library of animated GIFs, along the lines of giphy. It has the following pages:
 
 * Home page, listing all GIFs in the library
@@ -16,7 +16,7 @@ As well as these pages the app also has a search functionality -
 * searches GIF's name for keyword
 * searches GIf's uploader for keyword
 
-###Future Development Steps
+### Future Development Steps
 
 * Allow assignment of multiple categories to GIFs
 * look at user authentication and interaction tracks on treehouse and implement some of these ideas
